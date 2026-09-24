@@ -25,13 +25,15 @@ function App() {
   }
 
   return (
-    <main style={{ padding: '40px', fontFamily: 'sans-serif', maxWidth: '800px', margin: '0 auto' }}>
-      <h1 style={{ color: '#61dafb' }}>{data.titulo}</h1>
-      <p style={{ fontSize: '18px', color: '#333' }}>{data.descripcion}</p>
+    <main style={{ padding: '40px', fontFamily: 'sans-serif', maxWidth: '800px', margin: '0 auto', textAlign: 'left' }}>
+      <h1 style={{ color: '#0088cc', lineHeight: '1.3', marginBottom: '16px', fontSize: '32px' }}>
+        {data.titulo}
+      </h1>
+      <p style={{ fontSize: '18px', color: '#333', lineHeight: '1.5' }}>{data.descripcion}</p>
       
       <section style={{ marginTop: '20px', padding: '20px', backgroundColor: '#f5f5f5', borderRadius: '8px' }}>
-        <h2>Características principales:</h2>
-        <ul>
+        <h2 style={{ fontSize: '20px', marginBottom: '12px' }}>Características principales:</h2>
+        <ul style={{ paddingLeft: '20px' }}>
           {data.caracteristicas.map((item, index) => (
             <li key={index} style={{ marginBottom: '8px' }}>{item}</li>
           ))}
